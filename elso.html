@@ -1,103 +1,112 @@
 <!doctype html>
 <html lang="en">
   <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Matematika</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css" type="text/css">
-</head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Matek</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap first, then custom CSS so your rules override Bootstrap if needed -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
   <body>
-    <section class="container-fluit">
+    <section class="container-fluid">
         <div class="row">
             <h1 class="text-center">Matek feladatok</h1>
         </div>
     </section>
-    <section class="container py-2">
-        <div class="row">
-            <h3>1. kérdés</h3>
-            <p>Ha 10 almát 9 dobozba helyezünk, akkor a skatulyaelv szerint biztosan van legalább egy dobozban:</p>
-            <form>
-                <input type="radio" id="html" name="honfoglalas">
-                <label for="legfel1">Legfeljebb 1 alma</label><br>
-                <input type="radio" id="css" name="honfoglalas">
-                <label for="legal2">Legalább 2 alma</label><br>
-                <input type="radio" id="javascript" name="honfoglalas">
-                <label for="pont1">Pontosan 1 alma</label>
-            </form>
-        </div>
-    </section>
-    <section class="container py-2">
-        <div class="row">
-            <h3>2. kérdés</h3>
-            <p>Hány ember kell ahhoz, hogy biztosan legyen köztük legalább kettő, akik ugyanabban a hónapban születtek?</p>
-            <form>
-                <input type="radio" id="html" name="honfoglalas">
-                <label for="12">12</label><br>
-                <input type="radio" id="css" name="honfoglalas">
-                <label for="13">13</label><br>
-                <input type="radio" id="javascript" name="honfoglalas">
-                <label for="24">24</label>
-            </form>
-        </div>
-    </section>
-    <section class="container py-2">
-        <div class="row">
-            <h3>3. kérdés</h3>
-            <p>Van 5 pár zokni (mind különböző színű). Legalább hány zoknit kell kihúznod a fiókból, hogy biztosan legyen egy pár azonos színű zoknid?</p>
-            <form>
-                <input type="radio" id="html" name="honfoglalas">
-                <label for="5">5</label><br>
-                <input type="radio" id="css" name="honfoglalas">
-                <label for="6">6</label><br>
-                <input type="radio" id="javascript" name="honfoglalas">
-                <label for="10">10</label>
-            </form>
-        </div>
-    </section>
-    <section class="container py-2">
-        <div class="row">
-            <h3>4. kérdés</h3>
-            <p>Egy 20 elemű halmaz elemeit 6 dobozba tesszük. A skatulyaelv alapján legalább hány elem kerül ugyanabba a dobozba?</p>
-            <form>
-                <input type="radio" id="html" name="honfoglalas">
-                <label for="3">3</label><br>
-                <input type="radio" id="css" name="honfoglalas">
-                <label for="4">4</label><br>
-                <input type="radio" id="javascript" name="honfoglalas">
-                <label for="5">5</label>
-            </form>
-        </div>
-    </section>
-    <section class="container py-2">
-        <div class="row">
-            <h3>5. kérdés</h3>
-            <p>Egy 8×8-as sakktáblán 9 bástyát helyezünk el tetszőlegesen. Mit állíthatunk biztosan a skatulyaelv alapján?</p>
-            <form>
-                <input type="radio" id="html" name="honfoglalas">
-                <label for="A">Lesz legalább két bástya ugyanabban a sorban vagy oszlopban</label><br>
-                <input type="radio" id="css" name="honfoglalas">
-                <label for="B">Minden bástya külön sorban és oszlopban lesz</label><br>
-                <input type="radio" id="javascript" name="honfoglalas">
-                <label for="C">Lesz két bástya, amelyek egymás mellett állnak</label><br>  
-            </form>
-        </div>
-    </section>
 
-    
-        <section class="container py-2">
-            <div class="row">
-            <input type="submit" value="Ellenőrzés">
-            </div>
-        </section>
+    <form class="container py-2" id="quizForm">
+      <div class="row mb-3">
+        <h3>1. kérdés</h3>
+        <p>Ha 10 almát 9 dobozba helyezünk, akkor a skatulyaelv szerint biztosan van legalább egy dobozban:</p>
 
-    </section>
+        <div>
+          <input type="radio" id="q1_opt1" name="q1" value="legfel1">
+          <label for="q1_opt1">Legfeljebb 1 alma</label><br>
+
+          <input type="radio" id="q1_opt2" name="q1" value="legal2">
+          <label for="q1_opt2">Legalább 2 alma</label><br>
+
+          <input type="radio" id="q1_opt3" name="q1" value="pont1">
+          <label for="q1_opt3">Pontosan 1 alma</label>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <h3>2. kérdés</h3>
+        <p>Hány ember kell ahhoz, hogy biztosan legyen köztük legalább kettő, akik ugyanabban a hónapban születtek?</p>
+
+        <div>
+          <input type="radio" id="q2_opt1" name="q2" value="12">
+          <label for="q2_opt1">12</label><br>
+
+          <input type="radio" id="q2_opt2" name="q2" value="13">
+          <label for="q2_opt2">13</label><br>
+
+          <input type="radio" id="q2_opt3" name="q2" value="24">
+          <label for="q2_opt3">24</label>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <h3>3. kérdés</h3>
+        <p>Van 5 pár zokni (mind különböző színű). Legalább hány zoknit kell kihúznod a fiókból, hogy biztosan legyen egy pár azonos színű zoknid?</p>
+
+        <div>
+          <input type="radio" id="q3_opt1" name="q3" value="5">
+          <label for="q3_opt1">5</label><br>
+
+          <input type="radio" id="q3_opt2" name="q3" value="6">
+          <label for="q3_opt2">6</label><br>
+
+          <input type="radio" id="q3_opt3" name="q3" value="10">
+          <label for="q3_opt3">10</label>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <h3>4. kérdés</h3>
+        <p>Egy 20 elemű halmaz elemeit 6 dobozba tesszük. A skatulyaelv alapján legalább hány elem kerül ugyanabba a dobozba?</p>
+
+        <div>
+          <input type="radio" id="q4_opt1" name="q4" value="3">
+          <label for="q4_opt1">3</label><br>
+
+          <input type="radio" id="q4_opt2" name="q4" value="4">
+          <label for="q4_opt2">4</label><br>
+
+          <input type="radio" id="q4_opt3" name="q4" value="5">
+          <label for="q4_opt3">5</label>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <h3>5. kérdés</h3>
+        <p>Egy 8×8-as sakktáblán 9 bástyát helyezünk el tetszőlegesen. Mit állíthatunk biztosan a skatulyaelv alapján?</p>
+
+        <div>
+          <input type="radio" id="q5_opt1" name="q5" value="A">
+          <label for="q5_opt1">Lesz legalább két bástya ugyanabban a sorban vagy oszlopban</label><br>
+
+          <input type="radio" id="q5_opt2" name="q5" value="B">
+          <label for="q5_opt2">Minden bástya külön sorban és oszlopban lesz</label><br>
+
+          <input type="radio" id="q5_opt3" name="q5" value="C">
+          <label for="q5_opt3">Lesz két bástya, amelyek egymás mellett állnak</label><br>
+        </div>
+      </div>
+
+      <div class="row">
+        <input type="submit" class="btn btn-primary" value="Ellenőrzés">
+      </div>
+    </form>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>
-
