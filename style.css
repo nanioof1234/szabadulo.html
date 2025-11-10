@@ -1,0 +1,135 @@
+:root {
+  --bg1: #15182b;
+  --bg2: #1e2240;
+  --card: rgba(255, 255, 255, 0.1);
+  --card-hover: rgba(255, 255, 255, 0.18);
+  --border: rgba(255, 255, 255, 0.2);
+  --text: #ffffff;
+  --muted: #d0d0d0;
+
+  --accent1: #9D4EDD; 
+  --accent2: #4CC9F0; 
+  --accent3: #F72585; 
+  --accent4: #A9FF68; 
+
+  --radius: 14px;
+  --font-title: "Montserrat", sans-serif;
+  --font-body: "Poppins", sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: var("Poppins" );
+  color: var(--text);
+  background: linear-gradient(135deg, var(--bg1), var(--bg2));
+  background-size: 300% 300%;
+  animation: bgMove 18s ease infinite;
+}
+
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h1 {
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  font-size: 48px;
+  margin-top: 45px;
+  background: linear-gradient(90deg, var(--accent3), var(--accent2));
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+.container {
+  width: min(95%, 900px);
+  margin: 38px auto;
+  padding: 30px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(50, 50, 120, 0.4);
+}
+
+h2 {
+  font-family: var("Montserrat" );
+  color: var(--accent2);
+  font-size: 26px;
+  margin: 18px 0;
+  border-left: 5px solid var(--accent3);
+  padding-left: 12px;
+}
+
+.question {
+  padding: 18px;
+  background: var(--card);
+  border-radius: var(--radius);
+  margin-bottom: 20px;
+  transition: all 0.25s ease;
+  border: 1px solid transparent;
+}
+.question:hover {
+  background: var(--card-hover);
+  border-color: var(--accent2);
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(76, 201, 240, 0.5);
+}
+
+input[type="radio"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 3px solid var(--accent1);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+input[type="radio"]:checked {
+  border-color: var(--accent4);
+  background: var(--accent4);
+  box-shadow: 0 0 10px var(--accent4), 0 0 18px var(--accent4);
+}
+
+label {
+  margin-left: 8px;
+  color: var(--muted);
+  transition: 0.2s;
+  cursor: pointer;
+}
+input[type="radio"]:checked + label {
+  color: var(--accent2);
+  font-weight: 600;
+}
+
+button, .btn {
+  margin-top: 18px;
+  padding: 11px 20px;
+  background: linear-gradient(90deg, var(--accent3), var(--accent1));
+  border: none;
+  color: #000000;
+  font-family: var(--font-title);
+  font-size: 18px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0 0 25px rgba(245, 59, 200, 0.4);
+  transition: 0.25s;
+}
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(245, 59, 200, 0.8);
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 34px; }
+  h2 { font-size: 22px; }
+  .container { padding: 20px; }
+}
+ul {
+  margin-left: 5%;
+}
