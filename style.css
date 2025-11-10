@@ -7,10 +7,10 @@
   --text: #ffffff;
   --muted: #d0d0d0;
 
-  --accent1: #9D4EDD; 
-  --accent2: #4CC9F0; 
-  --accent3: #F72585; 
-  --accent4: #A9FF68; 
+  --accent1: #9D4EDD;
+  --accent2: #4CC9F0;
+  --accent3: #F72585;
+  --accent4: #A9FF68;
 
   --radius: 14px;
   --font-title: "Montserrat", sans-serif;
@@ -21,7 +21,7 @@ html, body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  font-family: var("Poppins" );
+  font-family: var(--font-body);
   color: var(--text);
   background: linear-gradient(135deg, var(--bg1), var(--bg2));
   background-size: 300% 300%;
@@ -40,6 +40,7 @@ h1 {
   font-size: 48px;
   margin-top: 45px;
   background: linear-gradient(90deg, var(--accent3), var(--accent2));
+  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   text-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
@@ -57,7 +58,7 @@ h1 {
 }
 
 h2 {
-  font-family: var("Montserrat" );
+  font-family: var(--font-title);
   color: var(--accent2);
   font-size: 26px;
   margin: 18px 0;
@@ -81,6 +82,7 @@ h2 {
 }
 
 input[type="radio"] {
+  -webkit-appearance: none;
   appearance: none;
   width: 18px;
   height: 18px;
@@ -101,6 +103,8 @@ label {
   transition: 0.2s;
   cursor: pointer;
 }
+
+/* this requires label to be the immediate sibling of the input */
 input[type="radio"]:checked + label {
   color: var(--accent2);
   font-weight: 600;
@@ -130,6 +134,4 @@ button:hover {
   h2 { font-size: 22px; }
   .container { padding: 20px; }
 }
-ul {
-  margin-left: 5%;
-}
+ul { margin-left: 5%; }
